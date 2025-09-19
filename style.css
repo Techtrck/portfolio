@@ -1,107 +1,136 @@
+/* General Body Styles */
 body {
-margin: 0;
-background-color: #1c1c1c;
-color: #f5f5f5;
-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-animation: fadeIn 2s ease-in;
+    margin: 0;
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation: fadeIn 1.5s ease-in;
 }
-.container {
-text-align: center;
-padding: 50px;
-}
-.highlight {
-color: #00bcd4;
-font-weight: bold;
-}
-button {
-margin: 10px;
-padding: 10px 20px;
-background-color: #00bcd4;
-border: none;
-border-radius: 5px;
-color: #1c1c1c;
-font-weight: bold;
-cursor: pointer;
-transition: background-color 0.3s;
-}
-button:hover {
-background-color: #0097a7;
-}
+
+/* Fade-in Animation */
 @keyframes fadeIn {
-from { opacity: 0; transform: translateY(-20px); }
-to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+
+/* Container for Centered Content (Home and Skills page) */
+.container {
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+}
+
+.container h1 {
+    font-size: 2.8rem;
+}
+
+.container p {
+    font-size: 1.2rem;
+    color: #c0c0c0;
+}
+
+.highlight {
+    color: #00bcd4;
+    font-weight: bold;
+}
+
+.home-nav {
+    margin-top: 20px;
+}
+
+/* General Button Styles */
+button {
+    margin: 10px;
+    padding: 12px 25px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 5px;
+    color: #1c1c1c;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #0097a7;
+    transform: translateY(-2px);
+}
+
 /* Project Page Specific Styles */
 .project-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-padding: 20px;
-gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
 }
+
 .project-container h1 {
-font-size: 2.5rem;
-color: #00bcd4;
-margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #00bcd4;
+    margin-bottom: 20px;
 }
+
 .project-card {
-background-color: #2a2a2a;
-border: 2px solid #4b4b4b;
-border-radius: 20px;
-padding: 30px;
-width: 90%;
-max-width: 600px;
-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #2a2a2a;
+    border: 2px solid #4b4b4b;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .project-card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
+
 .project-title {
-font-size: 1.8rem;
-margin-top: 0;
-margin-bottom: 10px;
+    font-size: 1.8rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #f5f5f5;
 }
+
 .project-description {
-font-size: 1rem;
-color: #c0c0c0;
-line-height: 1.5;
-margin-bottom: 20px;
+    font-size: 1rem;
+    color: #c0c0c0;
+    line-height: 1.5;
+    margin-bottom: 20px;
 }
+
 .project-link-container {
-background-color: #f5f5f5;
-border-radius: 5px;
-display: inline-block;
-padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
 }
+
+.project-link-container:hover {
+    background-color: #e0e0e0;
+}
+
 .project-link {
-color: #1c1c1c;
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s ease;
+    color: #1c1c1c;
+    text-decoration: none;
+    font-weight: bold;
 }
-.project-link:hover {
-color: #555;
-}
+
+/* Bottom Navigation Bar */
 .navigation-bar {
-text-align: center;
-padding: 20px;
+    text-align: center;
+    padding: 20px;
 }
-/* Old .pro1 and .pro11 styles - these have been replaced by the
-above, but are kept here to show the changes */
-/*
-.pro1 {
-text-align: center;
-border-radius: 20px;
-border: 2px rgb(75, 75, 75) solid;
-width: 80%;
-height: 100px;
-padding: 50px;
-}
-.pro11 {
-background-color: rgb(255, 255, 255);
-border-radius: 5px;
-color: black;
-}
-*/
